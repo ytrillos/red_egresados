@@ -3,8 +3,8 @@ import 'package:red_egresados/domain/repositorires/auth.dart';
 class Auth implements AuthInterface {
   @override
   Future<bool> signIn({required String email, required String password}) async {
-    final emailVal = "barry.allen@example.com" == email;
-    final passwordVal = "SuperSecretPassword!" == password;
+    final emailVal = "yuri@example.com" == email;
+    final passwordVal = "qazwsx951" == password;
     return emailVal && passwordVal;
   }
 

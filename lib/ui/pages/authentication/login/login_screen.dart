@@ -71,10 +71,17 @@ class _State extends State<LoginScreen> {
                       // ACTIVIDAD
                       // LUEGO DE VALIDAR EL ESTADO DE RED:
                       if (connectivityController.connected) {
-                       // PERMITA LA AUTENTICACIÓN A LA APP SI SE DETECTA CONEXIÓN
+                        // PERMITA LA AUTENTICACIÓN A LA APP SI SE DETECTA CONEXIÓN
+                        var result = await AuthManagement.signIn(
+                            email: emailController.text,
+                            password: passwordController.text);
+                        controller.authenticated = result;
                       } else {
                         // MUESTRE UN SNACKBAR (notificación) INDICANDO QUE NO EXISTE CONEXIÓN
-
+                        Get.showSnackbar(GetBar(
+                          message: "No estas conectado",
+                          duration: const Duration(seconds: 2),
+                        ));
                       }
                     },
                   ),

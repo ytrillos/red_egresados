@@ -87,7 +87,7 @@ class _State extends State<SignUpScreen> {
                         Get.showSnackbar(
                           GetBar(
                             message: "No estas conectado a la red.",
-                            duration: const Duration(seconds: 2),
+                            duration: const Duration(seconds: 10),
                           ),
                         );
                       }
